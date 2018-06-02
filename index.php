@@ -43,7 +43,7 @@ function _callback_handleConfirmation() {
 }
 
 function _callback_handleMessageNew($data) {
-    $user_id = $data->user_id;
+    $user_id = $data->object->user_id;
     $message = $data->object->body;
     bot_sendMessage($user_id, $message);
     _callback_okResponse();
