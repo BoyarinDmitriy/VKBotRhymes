@@ -24,6 +24,7 @@ function callback_handleEvent() {
             break;
 
         case CALLBACK_API_EVENT_MESSAGE_NEW:
+
             _callback_handleMessageNew($event['object']);
             break;
         default:
