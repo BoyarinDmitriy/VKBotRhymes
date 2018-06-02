@@ -17,14 +17,14 @@ callback_handleEvent();
 
 function callback_handleEvent() {
     $event = _callback_getEvent();
-    switch ($event['type']) {
+    switch ($event->type) {
         case CALLBACK_API_EVENT_CONFIRMATION:
             _callback_handleConfirmation();
             break;
 
         case CALLBACK_API_EVENT_MESSAGE_NEW:
 
-            _callback_handleMessageNew($event['object']);
+            _callback_handleMessageNew($event->object);
             break;
         default:
             _callback_response('Unsupported event');
@@ -43,8 +43,8 @@ function _callback_handleConfirmation() {
 }
 
 function _callback_handleMessageNew($data) {
-    $user_id = $data['user_id'];
-    $message = $data['object']['body'];
+    $user_id = $data->user_id;
+    $message = $data->object->body;
     bot_sendMessage($user_id, $message);
     _callback_okResponse();
 }
