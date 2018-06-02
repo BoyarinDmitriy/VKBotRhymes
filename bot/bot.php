@@ -1,9 +1,48 @@
 <?php
 
 function bot_sendMessage($user_id, $message) {
-  $users_get_response = vkApi_usersGet($user_id);
-  $user = array_pop($users_get_response);
-  $msg = "Привет, {$user['first_name']}, {$message}!";
+  $msg = get_rhyme($message);
 
   vkApi_messagesSend($user_id, $msg);
+}
+
+function get_rhyme($word){
+    $lines = file("rhymes.txt");
+    shuffle($lines);
+
+    file_put_contents("rhymes.txt", "");
+
+    $fp = fopen('rhymes.txt', 'a');
+
+    foreach($lines as $line)
+        fwrite($fp, $line);
+
+    $rhyme = '';
+
+    $i = strlen($word);
+    if($i > 8)
+        $i = 8;
+
+    while($rhyme == ''){
+        $descriptor = fopen('rhymes.txt', 'r');
+        while (($string = fgets($descriptor)) !== false) {
+            $string = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $string);
+            $string = str_replace("\r\n", "", $string);
+
+            if(substr($word, -$i) == substr($string, -$i) && $word != end(explode(' ', $string))){
+                $rhyme = $string;
+                break;
+            }
+
+        }
+        fclose($descriptor);
+
+        $i--;
+    }
+
+    if($i <= 1)
+        $rhyme = 'Ничего не удалось найти(';
+
+    return $rhyme;
+
 }

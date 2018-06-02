@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a3feab-965c-4506-8a63-169d614b3aee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/bot.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/bot.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rhymes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rhymes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rifmator.php" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,7 +19,7 @@
       <file leaf-file-name="vk_api.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/vk_api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
+            <state relative-caret-position="266">
               <caret line="30" selection-start-line="30" selection-end-line="30" />
             </state>
           </provider>
@@ -25,17 +28,8 @@
       <file leaf-file-name="bot.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bot/bot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="rifmator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rifmator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
             </state>
           </provider>
         </entry>
@@ -43,9 +37,16 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+            <state relative-caret-position="283">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="rhymes.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/rhymes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1507275" />
           </provider>
         </entry>
       </file>
@@ -83,10 +84,10 @@
         <option value="$PROJECT_DIR$/www/config.php" />
         <option value="$PROJECT_DIR$/www/index.php" />
         <option value="$PROJECT_DIR$/.idea/VKRifmatorBotPHP.iml" />
-        <option value="$PROJECT_DIR$/rifmator.php" />
-        <option value="$PROJECT_DIR$/bot/bot.php" />
         <option value="$PROJECT_DIR$/api/vk_api.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/rifmator.php" />
+        <option value="$PROJECT_DIR$/bot/bot.php" />
       </list>
     </option>
   </component>
@@ -192,12 +193,12 @@
       <workItem from="1527944451439" duration="6925000" />
       <workItem from="1527954647723" duration="5742000" />
       <workItem from="1527964066813" duration="1295000" />
-      <workItem from="1527967302493" duration="9994000" />
+      <workItem from="1527967302493" duration="13107000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36644000" />
+    <option name="totallyTimeSpent" value="39757000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -214,7 +215,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" visible="true" weight="0.18482758" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4986979" visible="true" weight="0.39448276" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -232,7 +233,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="12" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -366,13 +367,6 @@
     <entry file="file://$PROJECT_DIR$/bot.php" />
     <entry file="file://$PROJECT_DIR$/vk_api.php" />
     <entry file="file://$PROJECT_DIR$/www/api/yandex_api.php" />
-    <entry file="file://$PROJECT_DIR$/rhymes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/www/global.php" />
     <entry file="file://$USER_HOME$/php/php.ini">
       <provider selected="true" editor-type-id="text-editor">
@@ -386,8 +380,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/rifmator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -398,24 +392,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/rhymes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1507275" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/vk_api.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
+        <state relative-caret-position="266">
           <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bot/bot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="47" column="40" lean-forward="true" selection-start-line="47" selection-start-column="40" selection-end-line="47" selection-end-column="40" />
+        <state relative-caret-position="283">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
         </state>
       </provider>
     </entry>
