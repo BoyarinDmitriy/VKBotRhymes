@@ -17,7 +17,6 @@ callback_handleEvent();
 
 function callback_handleEvent() {
     $event = _callback_getEvent();
-
     switch ($event['type']) {
         case CALLBACK_API_EVENT_CONFIRMATION:
             _callback_handleConfirmation();

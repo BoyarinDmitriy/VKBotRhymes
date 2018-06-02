@@ -19,7 +19,6 @@ function vkApi_usersGet($user_id) {
 function _vkApi_call($method, $params = array()) {
     $params['access_token'] = VK_API_ACCESS_TOKEN;
     $params['v'] = VK_API_VERSION;
-
     $query = http_build_query($params);
     $url = VK_API_ENDPOINT.$method.'?'.$query;
 
@@ -28,9 +27,6 @@ function _vkApi_call($method, $params = array()) {
     $json = curl_exec($curl);
     curl_close($curl);
     $response = json_decode($json, true);
-
-    file_get_contents($url);
-    echo('ok');
 
     return $response['response'];
 }
