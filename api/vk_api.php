@@ -26,17 +26,10 @@ function _vkApi_call($method, $params = array()) {
   $curl = curl_init($url);
   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
   $json = curl_exec($curl);
-  $error = curl_error($curl);
-  if ($error) {
-    print('_vkApi_call Error');
-  }
 
   curl_close($curl);
 
   $response = json_decode($json, true);
-  if (!$response || !isset($response['response'])) {
-      print('_vkApi_call Error');
-  }
 
   return $response['response'];
 }
