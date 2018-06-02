@@ -29,14 +29,15 @@ function get_rhyme($word){
             $string = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $string);
             $string = str_replace("\r\n", "", $string);
 
-            if(substr($word, -$i) == substr($string, -$i) && $word != end(explode(' ', $string))){
+            $explode = explode(' ', $string);
+            $last = end($explode);
+
+            if(substr($word, -$i) == substr($string, -$i) && $word != $last){
                 $rhyme = $string;
                 break;
             }
-
         }
         fclose($descriptor);
-
         $i--;
     }
 
