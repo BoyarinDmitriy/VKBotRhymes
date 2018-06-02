@@ -10,6 +10,12 @@ function vkApi_messagesSend($peer_id, $message) {
     ));
 }
 
+function vkApi_usersGet($user_id) {
+    return _vkApi_call('users.get', array(
+        'user_id' => $user_id,
+    ));
+}
+
 function _vkApi_call($method, $params = array()) {
   $params['access_token'] = VK_API_ACCESS_TOKEN;
   $params['v'] = VK_API_VERSION;
