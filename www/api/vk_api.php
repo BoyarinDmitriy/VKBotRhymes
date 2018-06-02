@@ -1,6 +1,6 @@
 <?php
 
-define('VK_API_VERSION', '5.67'); //Используемая версия API
+define('VK_API_VERSION', '5.50'); //Используемая версия API
 define('VK_API_ENDPOINT', 'https://api.vk.com/method/');
 
 function vkApi_messagesSend($peer_id, $message) {
@@ -42,14 +42,14 @@ function _vkApi_call($method, $params = array()) {
   $json = curl_exec($curl);
   $error = curl_error($curl);
   if ($error) {
-    log_error($error);
+    print('_vkApi_call Error');
   }
 
   curl_close($curl);
 
   $response = json_decode($json, true);
   if (!$response || !isset($response['response'])) {
-    log_error($json);
+      print('_vkApi_call Error');
   }
 
   return $response['response'];
@@ -67,7 +67,7 @@ function vkApi_upload($url, $file_name) {
   $json = curl_exec($curl);
   $error = curl_error($curl);
   if ($error) {
-    log_error($error);
+      print('vkApi_upload Error');
   }
 
   curl_close($curl);
