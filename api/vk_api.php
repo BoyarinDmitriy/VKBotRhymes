@@ -1,6 +1,6 @@
 <?php
 
-define('VK_API_VERSION', '5.50'); //Используемая версия API
+define('VK_API_VERSION', '5.50');
 define('VK_API_ENDPOINT', 'https://api.vk.com/method/');
 
 function vkApi_messagesSend($peer_id, $message) {
