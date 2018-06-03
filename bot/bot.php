@@ -1,12 +1,17 @@
 <?php
 
 function bot_sendMessage($user_id, $message) {
-  $msg = get_rhyme($message);
+  $msg = get_rhyme($message, $user_id);
 
   vkApi_messagesSend($user_id, $msg);
 }
 
-function get_rhyme($word){
+function get_rhyme($word, $user_id){
+
+    if (is_readable('rhymes.txt')) {
+        vkApi_messagesSend($user_id, 'Readable');
+    }
+
     $lines = file("rhymes.txt");
     shuffle($lines);
 
