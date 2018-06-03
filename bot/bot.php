@@ -8,7 +8,7 @@ function bot_sendMessage($user_id, $message) {
 
 function get_rhyme($word, $user_id){
 
-    if (is_readable('rhymes.txt')) {
+    if (!is_readable('rhymes.txt')) {
         vkApi_messagesSend($user_id, 'Readable');
     }
 
