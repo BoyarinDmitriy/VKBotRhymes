@@ -24,12 +24,12 @@ function get_rhyme($word, $user_id){
     if($i > 8)
         $i = 8;
 
-    $a = true
+    $a = true;
 
     while($rhyme == ''){
         $descriptor = fopen('rhymes.txt', 'r');
         while (($string = fgets($descriptor)) !== false) {
-            $string = preg_replace("/(?![.=$'€%-])\p{P}/u", "", $string);
+            $string = preg_replace("\p{P}", "", $string);
             $string = str_replace("\r\n", "", $string);
 
             $explode = explode(' ', $string);
