@@ -27,7 +27,7 @@ function get_rhyme($word){
     while($rhyme == ''){
         $descriptor = fopen('rhymes.txt', 'r');
         while (($string = fgets($descriptor)) !== false) {
-            $string = str_replace("\r\n", "", $string);
+            $string = str_replace("\n", '', $string);
             $explode = explode(' ', $string);
             $last = end($explode);
             if(substr($word, -$i) == substr($string, -$i) && $word != $last){
