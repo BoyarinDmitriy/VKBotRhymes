@@ -11,8 +11,6 @@ function get_rhyme($word, $user_id){
     $lines = file("rhymes.txt");
     shuffle($lines);
 
-    vkApi_messagesSend($user_id, $lines[0]);
-
     file_put_contents("rhymes.txt", "");
 
     $fp = fopen('rhymes.txt', 'a');
@@ -34,6 +32,8 @@ function get_rhyme($word, $user_id){
 
             $explode = explode(' ', $string);
             $last = end($explode);
+
+            vkApi_messagesSend($user_id, $last);
 
             if(substr($word, -$i) == substr($string, -$i) && $word != $last){
                 $rhyme = $string;
