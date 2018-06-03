@@ -1,12 +1,12 @@
 <?php
 
 function bot_sendMessage($user_id, $message) {
-    $msg = get_rhyme($message, $user_id);
+    $msg = get_rhyme($message);
 
     vkApi_messagesSend($user_id, $msg);
 }
 
-function get_rhyme($word, $user_id){
+function get_rhyme($word){
 
     $lines = file("rhymes.txt");
     shuffle($lines);
@@ -28,11 +28,8 @@ function get_rhyme($word, $user_id){
         $descriptor = fopen('rhymes.txt', 'r');
         while (($string = fgets($descriptor)) !== false) {
             $string = str_replace("\r\n", "", $string);
-            vkApi_messagesSend($user_id, $string.' '.strlen($string));
             $explode = explode(' ', $string);
             $last = end($explode);
-            vkApi_messagesSend($user_id, 'Last:'.$last.' '.strlen($last));
-            vkApi_messagesSend($user_id, $word.' '.strlen($word));
             if(substr($word, -$i) == substr($string, -$i) && $word != $last){
                 $rhyme = $string;
                 break;
