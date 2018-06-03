@@ -24,6 +24,8 @@ function get_rhyme($word, $user_id){
     if($i > 8)
         $i = 8;
 
+    $a = true
+
     while($rhyme == ''){
         $descriptor = fopen('rhymes.txt', 'r');
         while (($string = fgets($descriptor)) !== false) {
@@ -33,7 +35,10 @@ function get_rhyme($word, $user_id){
             $explode = explode(' ', $string);
             $last = end($explode);
 
-            vkApi_messagesSend($user_id, $last);
+            if ($a) {
+                vkApi_messagesSend($user_id, $last);
+                $a = false;
+            }
 
             if(substr($word, -$i) == substr($string, -$i) && $word != $last){
                 $rhyme = $string;
