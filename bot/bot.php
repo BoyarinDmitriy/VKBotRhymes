@@ -2,7 +2,6 @@
 
 function bot_sendMessage($user_id, $message) {
     $msg = get_rhyme($message, $user_id);
-
     vkApi_messagesSend($user_id, $msg);
 }
 
