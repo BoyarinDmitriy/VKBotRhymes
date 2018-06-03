@@ -8,12 +8,10 @@ function bot_sendMessage($user_id, $message) {
 
 function get_rhyme($word, $user_id){
 
-    if (!is_readable('rhymes.txt')) {
-        vkApi_messagesSend($user_id, 'Readable');
-    }
-
     $lines = file("rhymes.txt");
     shuffle($lines);
+
+    vkApi_messagesSend($user_id, $lines[0]);
 
     file_put_contents("rhymes.txt", "");
 
