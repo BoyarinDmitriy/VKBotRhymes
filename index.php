@@ -24,7 +24,7 @@ function callback_handleEvent() {
 
         case CALLBACK_API_EVENT_MESSAGE_NEW:
 
-            _callback_handleMessageNew($event['items']);
+            _callback_handleMessageNew($event['object']);
             break;
         default:
             _callback_response('Unsupported event');
