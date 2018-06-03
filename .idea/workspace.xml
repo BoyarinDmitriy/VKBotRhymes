@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05a3feab-965c-4506-8a63-169d614b3aee" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/bot.php" beforeDir="false" afterPath="$PROJECT_DIR$/bot/bot.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rhymes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/rhymes.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,11 +22,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bot.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bot.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/bot/bot.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="357">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -42,7 +40,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rhymes.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="rhymes.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rhymes.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="57">
@@ -202,12 +200,12 @@
       <workItem from="1527964066813" duration="1295000" />
       <workItem from="1527967302493" duration="13995000" />
       <workItem from="1527981873409" duration="768000" />
-      <workItem from="1528006207592" duration="8542000" />
+      <workItem from="1528006207592" duration="8595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49955000" />
+    <option name="totallyTimeSpent" value="50008000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -442,10 +440,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bot/bot.php">
+    <entry file="file://$PROJECT_DIR$/rhymes.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="57">
+          <caret line="23079" column="35" selection-start-line="23079" selection-start-column="35" selection-end-line="23079" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -456,10 +454,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rhymes.txt">
+    <entry file="file://$PROJECT_DIR$/bot/bot.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="23079" column="35" selection-start-line="23079" selection-start-column="35" selection-end-line="23079" selection-end-column="35" />
+        <state relative-caret-position="357">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
