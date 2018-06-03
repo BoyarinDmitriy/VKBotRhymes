@@ -1,9 +1,9 @@
 <?php
 
 function bot_sendMessage($user_id, $message) {
-  $msg = get_rhyme($message, $user_id);
+    $msg = get_rhyme($message, $user_id);
 
-  vkApi_messagesSend($user_id, $msg);
+    vkApi_messagesSend($user_id, $msg);
 }
 
 function get_rhyme($word, $user_id){
@@ -29,7 +29,6 @@ function get_rhyme($word, $user_id){
     while($rhyme == ''){
         $descriptor = fopen('rhymes.txt', 'r');
         while (($string = fgets($descriptor)) !== false) {
-            $string = preg_replace("\p{P}", "", $string);
             $string = str_replace("\r\n", "", $string);
 
             $explode = explode(' ', $string);
