@@ -28,6 +28,9 @@ function get_acceptable_lines($word, $lines) {
 function get_acceptable_rhymes($word, $acceptable_lines) {
     $acceptable_rhymes = array();
     $len = mb_strlen($word, 'utf-8') - 1;
+    if($len > 8){
+        $len = 8;
+    }
     $isRhymesWereFound = false;
     while ($len >= 0 && !$isRhymesWereFound) {
         foreach ($acceptable_lines as $line) {
