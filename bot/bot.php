@@ -6,42 +6,41 @@ function bot_sendMessage($user_id, $message) {
     vkApi_messagesSend($user_id, $msg);
 }
 
-function get_rhyme($word){
-
+function get_rhyme($word) {
     $lines = file("rhymes.txt");
-    shuffle($lines);
+    $acceptable_lines = get_acceptable_lines($word, $lines);
+    $acceptable_rhymes = get_acceptable_rhymes($word, $acceptable_lines);
+    return !empty($acceptable_rhymes) ? $acceptable_rhymes[array_rand($acceptable_rhymes)] : 'Ничего не удалось найти';
+}
 
-    file_put_contents("rhymes.txt", "");
+function get_acceptable_lines($word, $lines) {
+    $acceptable_lines = array();
+    foreach($lines as $line) {
+        $line = str_replace("\n", '', $line);
+        $words = explode(' ', $line);
+        if(substr(end($words), -2) == substr($word, -2)) {
+            array_push($acceptable_lines, $line);
+        }
+    }
+    return $acceptable_lines;
+}
 
-    $fp = fopen('rhymes.txt', 'a');
-
-    foreach($lines as $line)
-        fwrite($fp, $line);
-
-    $rhyme = '';
-
-    $i = strlen($word);
-    if($i > 8)
-        $i = 8;
-
-    while($rhyme == ''){
-        $descriptor = fopen('rhymes.txt', 'r');
-        while (($string = fgets($descriptor)) !== false) {
-            $string = str_replace("\n", '', $string);
-            $explode = explode(' ', $string);
-            $last = end($explode);
-            if(substr($word, -$i) == substr($string, -$i) && $word != $last){
-                $rhyme = $string;
-                break;
+function get_acceptable_rhymes($word, $acceptable_lines) {
+    $acceptable_rhymes = array();
+    $len = mb_strlen($word, 'utf-8') - 1;
+    $flag = false;
+    while ($len >= 0 && !$flag) {
+        foreach ($acceptable_lines as $line) {
+            $words_in_line = explode(' ', $line);
+            $last_word = end($words_in_line);
+            $sub_word = mb_substr($word, -$len, null, 'utf-8');
+            $sub_last_word = mb_substr($last_word, -$len, null, 'utf-8');
+            if ($sub_word == $sub_last_word && $word != $last_word) {
+                array_push($acceptable_rhymes, $line);
+                $flag = true;
             }
         }
-        fclose($descriptor);
-        $i--;
+        $len--;
     }
-
-    if($i <= 1)
-        $rhyme = 'Ничего не удалось найти(';
-
-    return $rhyme;
-
+    return $acceptable_rhymes;
 }
