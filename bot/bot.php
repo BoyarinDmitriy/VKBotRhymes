@@ -2,7 +2,6 @@
 
 function bot_sendMessage($user_id, $message) {
     $msg = get_rhyme($message);
-
     vkApi_messagesSend($user_id, $msg);
 }
 
@@ -18,7 +17,8 @@ function get_acceptable_lines($word, $lines) {
     foreach($lines as $line) {
         $line = str_replace("\n", '', $line);
         $words = explode(' ', $line);
-        if(substr(end($words), -2) == substr($word, -2)) {
+        $last_word = end($words);
+        if(substr($last_word, -2) == substr($word, -2)) {
             array_push($acceptable_lines, $line);
         }
     }
@@ -28,8 +28,8 @@ function get_acceptable_lines($word, $lines) {
 function get_acceptable_rhymes($word, $acceptable_lines) {
     $acceptable_rhymes = array();
     $len = mb_strlen($word, 'utf-8') - 1;
-    $flag = false;
-    while ($len >= 0 && !$flag) {
+    $isRhymesWereFound = false;
+    while ($len >= 0 && !$isRhymesWereFound) {
         foreach ($acceptable_lines as $line) {
             $words_in_line = explode(' ', $line);
             $last_word = end($words_in_line);
@@ -37,7 +37,7 @@ function get_acceptable_rhymes($word, $acceptable_lines) {
             $sub_last_word = mb_substr($last_word, -$len, null, 'utf-8');
             if ($sub_word == $sub_last_word && $word != $last_word) {
                 array_push($acceptable_rhymes, $line);
-                $flag = true;
+                $isRhymesWereFound = true;
             }
         }
         $len--;
