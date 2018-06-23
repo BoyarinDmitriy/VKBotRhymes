@@ -15,7 +15,7 @@ function get_rhyme($word) {
 function get_acceptable_lines($word, $lines) {
     $acceptable_lines = array();
     foreach($lines as $line) {
-        $line = str_replace("\n", '', $line);
+        $line = str_replace(PHP_EOL, '', $line);
         $words = explode(' ', $line);
         $last_word = end($words);
         if(substr($last_word, -2) == substr($word, -2)) {
